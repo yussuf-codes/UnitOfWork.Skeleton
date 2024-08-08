@@ -14,7 +14,7 @@ public class Model3Repository : GenericRepository<Model3>, IModel3Repository
 
     }
 
-    public override void Add(Model3 obj)
+    public override object Add(Model3 obj)
     {
         // Doing some custom behavior
         _databaseContext.Entities3.Add(obj);

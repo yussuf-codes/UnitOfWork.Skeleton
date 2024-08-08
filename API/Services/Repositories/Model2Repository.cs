@@ -14,7 +14,7 @@ public class Model2Repository : GenericRepository<Model2>, IModel2Repository
 
     }
 
-    public override void Add(Model2 obj)
+    public override object Add(Model2 obj)
     {
         // Doing some custom behavior
         _databaseContext.Entities2.Add(obj);
