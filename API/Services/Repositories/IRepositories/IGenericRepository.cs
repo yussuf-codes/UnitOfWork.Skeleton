@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public interface IGenericRepository<T>
 {
-    void Add(T obj);
+    object Add(T obj);
     void Delete(int id);
     bool Exists(int id);
     IEnumerable<T> Get();
