@@ -18,6 +18,7 @@ public class Model2Repository : GenericRepository<Model2>, IModel2Repository
     {
         // Doing some custom behavior
         _databaseContext.Entities2.Add(obj);
+        throw new NotImplementedException();
         // Doing some custom behavior
     }
 

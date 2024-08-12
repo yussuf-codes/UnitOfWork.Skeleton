@@ -7,22 +7,26 @@ namespace Services;
 
 public class UnitOfWork : IUnitOfWork
 {
+    public IModel1Repository Model1Repository { get; private set; }
+    public IModel2Repository Model2Repository { get; private set; }
+    public IModel3Repository Model3Repository { get; private set; }
+
     private readonly DatabaseContext _databaseContext;
 
-    public UnitOfWork(DatabaseContext databaseContext)
+    public UnitOfWork
+    (
+        DatabaseContext databaseContext,
+        Model1Repository model1,
+        Model2Repository model2,
+        Model3Repository model3
+    )
     {
         _databaseContext = databaseContext;
 
-        model1Repository = new Model1Repository(_databaseContext);
-        model2Repository = new Model2Repository(_databaseContext);
-        model3Repository = new Model3Repository(_databaseContext);
+        Model1Repository = model1;
+        Model2Repository = model2;
+        Model3Repository = model3;
     }
-
-    public IModel1Repository model1Repository { get; private set; }
-
-    public IModel2Repository model2Repository { get; private set; }
-
-    public IModel3Repository model3Repository { get; private set; }
 
     public void SaveChanges()
     {

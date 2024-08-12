@@ -18,6 +18,7 @@ public class Model3Repository : GenericRepository<Model3>, IModel3Repository
     {
         // Doing some custom behavior
         _databaseContext.Entities3.Add(obj);
+        throw new NotImplementedException();
         // Doing some custom behavior
     }
 

@@ -8,6 +8,6 @@ public interface IGenericRepository<T>
     void Delete(int id);
     bool Exists(int id);
     IEnumerable<T> Get();
-    T Get(int id);
+    T? Get(int id);
     void Update(int id, T obj);
 }

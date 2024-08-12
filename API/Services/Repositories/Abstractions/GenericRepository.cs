@@ -16,7 +16,7 @@ public abstract class GenericRepository<T> : IGenericRepository<T> where T : Bas
         _databaseContext = databaseContext;
     }
 
-    virtual public void Add(T obj)
+    virtual public object Add(T obj)
     {
         throw new NotImplementedException();
     }
@@ -36,7 +36,7 @@ public abstract class GenericRepository<T> : IGenericRepository<T> where T : Bas
         throw new NotImplementedException();
     }
 
-    virtual public T Get(int id)
+    virtual public T? Get(int id)
     {
         throw new NotImplementedException();
     }
