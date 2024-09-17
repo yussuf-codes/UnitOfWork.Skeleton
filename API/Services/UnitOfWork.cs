@@ -1,4 +1,6 @@
 using Data;
+using System;
+using System.Threading.Tasks;
 using Services.IServices;
 using Services.Repositories;
 using Services.Repositories.IRepositories;
@@ -28,8 +30,23 @@ public class UnitOfWork : IUnitOfWork
         Model3Repository = model3;
     }
 
-    public void SaveChanges()
+    public Task<bool> SaveChangesAsync()
     {
-        _databaseContext.SaveChanges();
+        throw new NotImplementedException();
+    }
+
+    public Task BeginTransactionAsync()
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task CommitTransactionAsync()
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task RollbackTransactionAsync()
+    {
+        throw new NotImplementedException();
     }
 }
