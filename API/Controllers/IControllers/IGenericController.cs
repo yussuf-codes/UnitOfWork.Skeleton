@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-
 using Models.Abstractions;
 
 namespace Controllers.IControllers;
